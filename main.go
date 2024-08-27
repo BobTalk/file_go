@@ -2,16 +2,15 @@ package main
 
 import (
 	"log"
-	"net/http"
 
 	"github.com/autech/file/readpkg"
-	"github.com/gorilla/mux"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := mux.NewRouter()
+	r := gin.Default()
 
-	r.HandleFunc("/read/{type}", readpkg.ReadFileByAddress)
+	r.GET("/read/:type", readpkg.ReadFileByAddress)
 
 	// r.PathPrefix("/upload/")
 	// 指定静态文件目录
@@ -19,5 +18,6 @@ func main() {
 	// 将静态文件处理器注册到路由
 	// http.Handle("/static/", http.StripPrefix("/static/", fs))
 	log.Println("服务器启动，访问 http://localhost:3000")
-	http.ListenAndServe(":3000", r)
+	// http.ListenAndServe(":3000", r)
+	r.run(":3000")
 }
