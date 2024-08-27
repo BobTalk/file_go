@@ -9,7 +9,6 @@ import (
 
 func ReadFileByAddress(c *gin.Context) {
 	fileType := c.Param("type")
-	fmt.Fprintln(fileType)
 	switch fileType {
 	case "white-paper":
 		ReadPDFHandler()

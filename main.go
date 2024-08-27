@@ -9,7 +9,7 @@ import (
 
 func main() {
 	r := gin.Default()
-
+	r.LoadHTMLGlob("views/*")
 	r.GET("/read/:type", readpkg.ReadFileByAddress)
 
 	// r.PathPrefix("/upload/")
