@@ -38,3 +38,37 @@ go run main.go 或者 air
 
 [参考文档地址](https://www.topgoer.com/)
 
+#### 检查文件类型
+```
+file /usr/local/app/tmp/web3ChainAddress
+```
+
+#### 起服务
+```
+sudo systemctl daemon-reload
+sudo systemctl start yourapp
+sudo systemctl enable yourapp
+```
+#### 添加配置文件app.service
+```
+/etc/systemd/system/yourapp.service
+[Unit]
+Description=Your Go App
+
+[Service]
+ExecStart=/path/to/yourapp
+WorkingDirectory=/path/to/working/directory
+Restart=always
+User=www-data
+# Group=www-data
+Environment=PORT=8080
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+#### 错误状态码
+```
+1. 203  执行文件类型不对
+```
