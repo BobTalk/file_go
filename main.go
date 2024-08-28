@@ -12,8 +12,8 @@ import (
 func main() {
 	r := gin.Default()
 	r.GET("/getAddress/:type", getAddress)
-	log.Println("服务器启动，访问 http://localhost:3100")
-	r.Run(":3100")
+	log.Println("服务器启动，访问 http://localhost:3000")
+	r.Run(":3000")
 }
 func getAddress(c *gin.Context) {
 	coinType := strings.ToLower(c.Param("type"))
