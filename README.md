@@ -46,8 +46,9 @@ file /usr/local/app/tmp/web3ChainAddress
 #### 起服务
 ```
 sudo systemctl daemon-reload
-sudo systemctl start yourapp
-sudo systemctl enable yourapp
+sudo systemctl start web3ChainAddress
+sudo systemctl enable web3ChainAddress
+sudo systemctl restart web3ChainAddress
 ```
 #### 添加配置文件app.service
 ```
@@ -72,3 +73,12 @@ WantedBy=multi-user.target
 ```
 1. 203  执行文件类型不对
 ```
+
+1. 服务器打包
+  GOOS=linux GOARCH=amd64 go build -o tmp/web3ChainAddress
+2. 本地打包
+  go build -o tmp/web3ChainAddress
+
+  vim /etc/systemd/system/web3ChainAddress.service
+
+  sudo netstat -tulnp | grep ':80'
