@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/autech/web3Chain/getAbi"
 	"github.com/autech/web3Chain/getAddress"
 	"github.com/gin-gonic/gin"
 )
@@ -10,6 +11,7 @@ import (
 func main() {
 	r := gin.Default()
 	r.GET("/getAddress/:type", getAddress.AddressByType)
+	r.GET("/getAbi/:type", getAbi.AbiByType)
 	log.Println("服务器启动，访问 http://localhost:9100")
 	r.Run(":9100")
 }
