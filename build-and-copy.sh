@@ -16,7 +16,7 @@ if [ $? -eq 0 ]; then
   # 拷贝tmp文件到服务器
   scp ./tmp.zip root@43.207.176.239:/usr/local/app
   
-  echo ".env 文件已拷贝到 tmp/ 和服务器的 /usr/local/app/tmp/"
+  echo ".env.production 文件已拷贝到 tmp/ 和服务器的 /usr/local/app/tmp/"
 else
   echo "编译失败，未拷贝 .env 文件"
   exit 1
