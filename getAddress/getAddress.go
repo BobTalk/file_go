@@ -10,7 +10,6 @@ import (
 
 func AddressByType(c *gin.Context) {
 	coinType := strings.ToLower(c.Param("type"))
-
 	switch coinType {
 	case "ozc":
 		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("ozcAddress")})

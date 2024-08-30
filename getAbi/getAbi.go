@@ -59,5 +59,5 @@ func ReadAbiByFileUri(uri string, c *gin.Context) {
 	}
 
 	// 以 JSON 格式返回给前端
-	c.JSON(http.StatusOK, jsonArray)
+	c.JSON(http.StatusOK, gin.H{"data": jsonArray})
 }
