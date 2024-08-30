@@ -17,18 +17,25 @@ func AbiByType(c *gin.Context) {
 		ReadAbiByFileUri("static/ozcoinExpandAbi.json", c)
 		break
 	case "multiple":
-		c.JSON(http.StatusOK, gin.H{"data": ""})
+		ReadAbiByFileUri("static/multiSigWalletAbi.json", c)
 		break
 	case "toto":
-		c.JSON(http.StatusOK, gin.H{"data": ""})
+		ReadAbiByFileUri("static/totoExpandAbi.json", c)
 		break
 	case "stake":
-		c.JSON(http.StatusOK, gin.H{"data": ""})
+		ReadAbiByFileUri("static/ozcoinStakeExpandAbi.json", c)
 		break
 	case "busd":
-		c.JSON(http.StatusOK, gin.H{"data": ""})
+		ReadAbiByFileUri("static/ozcoinExpandAbi.json", c)
+		break
+	case "erc":
+		ReadAbiByFileUri("static/erc20Abi.json", c)
+		break
+	default:
+
 		break
 	}
+
 }
 
 func ReadAbiByFileUri(uri string, c *gin.Context) {
@@ -39,13 +46,11 @@ func ReadAbiByFileUri(uri string, c *gin.Context) {
 		return
 	}
 	defer file.Close()
-
 	byteValue, err := ioutil.ReadAll(file)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-
 	// 将 JSON 内容解析到一个切片中
 	var jsonArray []map[string]interface{}
 	if err := json.Unmarshal(byteValue, &jsonArray); err != nil {

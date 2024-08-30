@@ -27,5 +27,7 @@ func AddressByType(c *gin.Context) {
 	case "busd":
 		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("busdAddress")})
 		break
+	default:
+		break
 	}
 }
