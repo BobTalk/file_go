@@ -9,14 +9,14 @@ if [ $? -eq 0 ]; then
   mkdir -p tmp
   
   # 拷贝 .env 文件到 tmp 目录
-  cp .env.production tmp/.env.production
+  cp -rf .env tmp/.env ./static tmp
   
-
-  zip tmp.zip ./tmp
+  # 压缩
+  # zip tmp.zip ./tmp
   # 拷贝tmp文件到服务器
-  scp ./tmp.zip root@43.207.176.239:/usr/local/app
+  # scp ./tmp.zip root@43.207.176.239:/usr/local/app
   
-  echo ".env.production 文件已拷贝到 tmp/ 和服务器的 /usr/local/app/tmp/"
+  echo ".env 文件已拷贝到 tmp/ 和服务器的 /usr/local/app/"
 else
   echo "编译失败，未拷贝 .env 文件"
   exit 1

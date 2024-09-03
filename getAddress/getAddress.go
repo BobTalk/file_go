@@ -2,15 +2,14 @@ package getAddress
 
 import (
 	"net/http"
-	"strings"
 
 	"github.com/autech/web3Chain/utils"
 	"github.com/gin-gonic/gin"
 )
 
 func AddressByType(c *gin.Context) {
-	coinType := strings.ToLower(c.Param("type"))
-	switch coinType {
+	params := c.Param("type")
+	switch params {
 	case "ozc":
 		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("ozcAddress")})
 		break
@@ -27,6 +26,7 @@ func AddressByType(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("busdAddress")})
 		break
 	default:
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "type is defined!"})
 		break
 	}
 }

@@ -39,18 +39,22 @@ go run main.go 或者 air
 [参考文档地址](https://www.topgoer.com/)
 
 #### 检查文件类型
+
 ```
 file /usr/local/app/tmp/web3ChainAddress
 ```
 
 #### 起服务
+
 ```
 sudo systemctl daemon-reload
-sudo systemctl start web3ChainAddress
-sudo systemctl enable web3ChainAddress
-sudo systemctl restart web3ChainAddress
+sudo systemctl start main
+sudo systemctl enable main
+sudo systemctl restart main
 ```
+
 #### 添加配置文件app.service
+
 ```
 /etc/systemd/system/yourapp.service
 [Unit]
@@ -70,15 +74,16 @@ WantedBy=multi-user.target
 ```
 
 #### 错误状态码
+
 ```
 1. 203  执行文件类型不对
 ```
 
 1. 服务器打包
-  GOOS=linux GOARCH=amd64 go build -o tmp/web3ChainAddress
+   GOOS=linux GOARCH=amd64 go build -o tmp/web3ChainAddress
 2. 本地打包
-  go build -o tmp/web3ChainAddress
+   go build -o tmp/web3ChainAddress
 
-  vim /etc/systemd/system/web3ChainAddress.service
+vim /etc/systemd/system/main.service
 
-  sudo netstat -tulnp | grep ':80'
+sudo netstat -tulnp | grep ':80'
