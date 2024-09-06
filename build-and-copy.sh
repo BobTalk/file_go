@@ -9,7 +9,7 @@ if [ $? -eq 0 ]; then
   mkdir -p tmp
   
   # 拷贝 .env 文件到 tmp 目录
-  cp -rf .env tmp/.env ./static tmp
+  cp -rf .env tmp/.env  ./static tmp
   
   # 压缩
   # zip tmp.zip ./tmp
