@@ -1,0 +1,34 @@
+2024/09/06 14:45:30 logs.go:32: 当前环境:: development
+2024/09/06 14:45:30 logs.go:32: 当前环境:: development
+2024/09/06 14:45:30 logs.go:32: 当前环境:: development
+2024/09/06 14:45:30 logs.go:32: 当前环境:: development
+2024/09/06 15:08:04 logs.go:32: 当前环境:: development
+2024/09/06 15:08:04 logs.go:32: 当前环境:: development
+2024/09/06 15:08:04 logs.go:32: 当前环境:: development
+2024/09/06 15:08:04 logs.go:32: 当前环境:: development
+2024/09/06 15:08:04 logs.go:32: 当前环境:: development
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : ozc
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : ozcoinExpandAbi.json
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : stake
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : multiple
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : ozcoinStakeExpandAbi.json
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : multiSigWalletAbi.json
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : erc
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : busd
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : erc20Abi.json
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : ozcoinExpandAbi.json
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : contract
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : contractAbi.json
+2024/09/06 15:37:36 logs.go:32: 开始调用接口 getAbi参数: : toto
+2024/09/06 15:37:36 logs.go:32: 文件地址 %s : : totoExpandAbi.json
+2024/09/06 15:48:27 logs.go:32: 当前环境:: development
+2024/09/06 15:48:27 logs.go:32: 当前环境:: development
+2024/09/06 15:48:27 logs.go:32: 当前环境:: development
+2024/09/06 15:48:27 logs.go:32: 当前环境:: development
+2024/09/06 15:48:27 logs.go:32: 当前环境:: development

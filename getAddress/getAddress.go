@@ -25,6 +25,9 @@ func AddressByType(c *gin.Context) {
 	case "busd":
 		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("busdAddress")})
 		break
+	case "preSale":
+		c.JSON(http.StatusOK, gin.H{"data": utils.GetEnv("preSaleAddress")})
+		break
 	default:
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "type is defined!"})
 		break
